@@ -47,7 +47,7 @@ def CharacterRandomizerFrame(root, characters, ShowMainMenu):
     RandomizeBtn.pack(pady=20)
 
     #Returns to main menu
-    BackBtn = tk.Button(frame, text="Back to Main Menu", command=show_main_menu)
+    BackBtn = tk.Button(frame, text="Back to Main Menu", command=ShowMainMenu)
     BackBtn.pack(pady=20)
 
     return frame
