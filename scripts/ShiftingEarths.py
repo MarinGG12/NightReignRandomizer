@@ -1,25 +1,29 @@
 import tkinter as tk
 import random
 
-def ShiftingEarths_frame(root, show_main_menu):
+def ShiftingEarthsFrame(root, ShowMainMenu):
     frame = tk.Frame(root)
 
     label = tk.Label(frame, text="Shifting Earths", font=("Arial", 16))
     label.pack(pady=40)
 
-    shifting_earths = ["None", "Noklateo", "Crater", "Rotten Woods", "Montain Top"]
+    # List of Shifting Earths
+    ShiftingEarths = ["None", "Noklateo", "Crater", "Rotten Woods", "Montain Top"]
 
-    result_label = tk.Label(frame, text="", font=("Arial", 14))
-    result_label.pack(pady=20)
+    resultLabel = tk.Label(frame, text="", font=("Arial", 14))
+    resultLabel.pack(pady=20)
 
-    def on_randomize():
-        chosen = random.choice(shifting_earths)
-        result_label.config(text=f"{chosen}")
+    # Function to handle randomization
+    def OnRandomize():
+        chosen = random.choice(ShiftingEarths)
+        resultLabel.config(text=f"{chosen}")
 
-    randomize_button = tk.Button(frame, text="Randomize Shifting Earths", command=on_randomize)
-    randomize_button.pack(pady=20)
+    # Randomize Button
+    RandomizeBtn = tk.Button(frame, text="Randomize Shifting Earths", command=OnRandomize)
+    RandomizeBtn.pack(pady=20)
 
-    back_button = tk.Button(frame, text="Back to Main Menu", command=show_main_menu)
-    back_button.pack(pady=20)
+    # Back to Main Menu Button
+    BackBtn = tk.Button(frame, text="Back to Main Menu", command=ShowMainMenu)
+    BackBtn.pack(pady=20)
 
     return frame
